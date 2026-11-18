@@ -6,27 +6,29 @@
 </p>
 
 <p align="center">
-  <img src="docs/images/showcase.jpg" alt="Training plots of the MNIST network and of the next-word LSTM" width="100%">
+  <img src="docs/images/showcase.jpg" alt="The idea: a sequence of words goes into a recurrent block, the next word comes out" width="100%">
 </p>
 
 ## About
 
-**neural-network** is a learning workspace for neural networks in PyTorch: from tensors and a data loader, through a
-small fully connected network on MNIST, to a recurrent network that predicts the next word of a sentence. It was
-split off from the former `Id-Verification-And-Neural-Network` repository (this one is that repository, renamed); the
-OpenCV scripts now live in `id-verification` and the small Python exercises in `tools/projects/python-exercises`.
+**neural-network** is a next-word prediction model written in PyTorch: given a sequence of 5 or 10 words, a bidirectional
+LSTM predicts the word that follows. Around it are the warm-ups that led to it: tensors, a data loader and a small
+fully connected network on MNIST. It was split off from the former `Id-Verification-And-Neural-Network` repository
+(this one is that repository, renamed); the OpenCV scripts now live in `id-verification` and the small Python
+exercises in `tools/projects/python-exercises`.
 
-- **Tensor basics (`tensorBasics.py`).** Creating tensors, addition, element-wise multiplication, transpose.
-- **Data loader (`dataLoaderMnist.py`).** MNIST with a `DataLoader`, normalisation (mean 0.1307, std 0.3081),
-  batches of 64.
+- **Next-word prediction (`pyTorch/advancedTools/`).** A two-layer bidirectional LSTM with an embedding and layer
+  normalisation (`ComplexRNN`), trained on word sequences of length 5 or 10. The text is tokenised and lemmatised
+  with NLTK (`wordPreprocessing.py`) and read from `advancedTools/base/` (Sherlock Holmes stories, a collection of
+  sentences, an emotion data set). 256-dimensional embeddings and hidden state, 40 epochs, learning rate 0.0001 by
+  default. `trainedModel.py` prints the sentence, the target word and the model's prediction.
+- **Four trained models** are in `pyTorch/path/` (one per text: stories, sentences, emotions and a
+  `next_word_prediction_data_base.txt` whose text is not in the repository), each with its training plot.
 - **MNIST network (`neuralNetwork.py`).** A 784-64-10 network (`SimpleNet`) with cross-entropy loss, SGD with
   momentum and weight decay, early stopping (`patience`), plots of loss and accuracy per epoch, and saving and
   loading of the weights.
-- **Next-word prediction (`advancedTools/`).** A two-layer bidirectional LSTM with an embedding and layer
-  normalisation (`ComplexRNN`), trained on word sequences of length 5 or 10. The text is tokenised and lemmatised
-  with NLTK (`wordPreprocessing.py`) and read from `advancedTools/base/` (Sherlock Holmes stories, a sentence
-  collection, an emotion data set). 256-dimensional embeddings and hidden state, 40 epochs, learning rate 0.0001 by
-  default.
+- **Warm-ups.** `tensorBasics.py` (tensors, addition, element-wise multiplication, transpose) and `dataLoaderMnist.py`
+  (MNIST with a `DataLoader`, normalisation with mean 0.1307 and std 0.3081, batches of 64).
 
 > **Status:** a personal learning project. No accuracy figure is claimed here. The `data/` folder (MNIST) is
 > downloaded on first run and is not in the repository; the sample prediction code uses CUDA.
@@ -45,16 +47,20 @@ Comments are a mix of English and Polish; the README, commits and branches are i
 
 ## Screenshots
 
-The scripts have no interface of their own; these are the training plots they saved in `pyTorch/path/`, drawn in window
-frames by `tools/readme-images`. The big picture at the top shows the fully connected network on MNIST after 50 epochs
-and the next-word LSTM trained on the stories; below, the same network after 200 epochs and the model trained on sentences.
+The picture at the top is an illustration of the idea (a sequence of words, a recurrent block, the next word); it is not
+output of the scripts. The scripts have no interface of their own: below are the training plots they saved in
+`pyTorch/path/`, drawn in window frames by `tools/readme-images`. First the next-word model trained on the stories and
+on the sentences, then the MNIST network after 50 and 200 epochs.
 
 <p align="center">
-  <img src="docs/images/plots.jpg" alt="The MNIST network after 200 epochs and the next-word model trained on sentences" width="100%">
+  <img src="docs/images/plots.jpg" alt="Training loss and accuracy of the next-word model on the stories and on the sentences" width="100%">
+</p>
+<p align="center">
+  <img src="docs/images/mnist.jpg" alt="Loss and accuracy of the MNIST network after 50 and after 200 epochs" width="100%">
 </p>
 
-All the saved plots are in `pyTorch/path/`: `epoch5.png`, `epoch20.png`, `epoch50.png` and `epoch200.png` (the MNIST
-network), and `training_plots_<text>_<length>.png` (the next-word model, one per text).
+All the saved plots are in `pyTorch/path/`: `training_plots_<text>_<length>.png` (the next-word model, one per text) and
+`epoch5.png`, `epoch20.png`, `epoch50.png` and `epoch200.png` (the MNIST network).
 
 ## Quick start
 

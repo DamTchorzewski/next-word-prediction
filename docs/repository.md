@@ -19,7 +19,7 @@ GitHub: strona repozytorium → ⚙ obok „About” → pola poniżej. Opis ma 
 **Opis (Description):**
 
 ```text
-PyTorch learning workspace: tensors, an MNIST data loader and a small fully connected network, up to a bidirectional LSTM that predicts the next word, trained on text corpora preprocessed with NLTK. Training plots and saved models included.
+Next-word prediction in PyTorch: a bidirectional LSTM that predicts the word following a sequence of 5 or 10 words, trained on text corpora preprocessed with NLTK, plus the warm-ups before it (tensors, a small MNIST network). Training plots and four trained models included.
 ```
 
 **Strona (Website):** puste (skrypty, nie ma strony).
@@ -33,7 +33,7 @@ python pytorch neural-network deep-learning machine-learning mnist lstm rnn nlp 
 Z GitHub CLI (`gh`) to samo jedną komendą (stare tagi `opencv`, `ocr`, `tesseract`, `id-verification`, `svm` usuń ręcznie lub `--remove-topic`):
 
 ```bash
-gh repo edit DamTchorzewski/neural-network --description "PyTorch learning workspace: tensors, an MNIST data loader and a small fully connected network, up to a bidirectional LSTM that predicts the next word, trained on text corpora preprocessed with NLTK. Training plots and saved models included." --add-topic python,pytorch,neural-network,deep-learning,machine-learning,mnist,lstm,rnn,nlp,next-word-prediction,nltk,torchvision
+gh repo edit DamTchorzewski/neural-network --description "Next-word prediction in PyTorch: a bidirectional LSTM that predicts the word following a sequence of 5 or 10 words, trained on text corpora preprocessed with NLTK, plus the warm-ups before it (tensors, a small MNIST network). Training plots and four trained models included." --add-topic python,pytorch,neural-network,deep-learning,machine-learning,mnist,lstm,rnn,nlp,next-word-prediction,nltk,torchvision
 ```
 
 ## Wielkość repozytorium
