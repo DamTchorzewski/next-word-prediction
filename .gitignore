@@ -1,3 +1,6 @@
 data/
 *.pth
 __pycache__/
+
+# Local working files (standards/scratch.md)
+/.scratch/

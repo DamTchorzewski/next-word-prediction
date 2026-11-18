@@ -1,4 +1,13 @@
-# neural-network
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/banner-dark.png">
+    <img src="docs/images/banner-light.png" alt="neural-network: PyTorch learning workspace" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <img src="docs/images/showcase.jpg" alt="Training plots of the MNIST network and of the next-word LSTM" width="100%">
+</p>
 
 ## About
 
@@ -36,14 +45,16 @@ Comments are a mix of English and Polish; the README, commits and branches are i
 
 ## Screenshots
 
-Training curves saved by the scripts are in the repository:
+The scripts have no interface of their own; these are the training plots they saved in `pyTorch/path/`, drawn in window
+frames by `tools/readme-images`. The big picture at the top shows the fully connected network on MNIST after 50 epochs
+and the next-word LSTM trained on the stories; below, the same network after 200 epochs and the model trained on sentences.
 
-| Image                                                                                                                                  | Shows                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| [pyTorch/path/Iterations.png](pyTorch/path/Iterations.png)                                                                             | training of the MNIST network                   |
-| [pyTorch/path/epoch50.png](pyTorch/path/epoch50.png)                                                                                   | a training plot, 50 epochs                      |
-| [pyTorch/path/training_plots_sherlock_holm_stories_plain.txt_10.png](pyTorch/path/training_plots_sherlock_holm_stories_plain.txt_10.png) | training of the next-word model on the stories  |
-| [pyTorch/path/training_plots_generate_sentense.txt_5.png](pyTorch/path/training_plots_generate_sentense.txt_5.png)                     | training of the next-word model on sentences    |
+<p align="center">
+  <img src="docs/images/plots.jpg" alt="The MNIST network after 200 epochs and the next-word model trained on sentences" width="100%">
+</p>
+
+All the saved plots are in `pyTorch/path/`: `epoch5.png`, `epoch20.png`, `epoch50.png` and `epoch200.png` (the MNIST
+network), and `training_plots_<text>_<length>.png` (the next-word model, one per text).
 
 ## Quick start
 
@@ -88,7 +99,7 @@ pyTorch/advancedTools/base/                     the text corpora
 pyTorch/advancedTools/wordPairs/                generated vocabularies and word-pair files
 pyTorch/path/                                   plots and saved models
 data/                                           MNIST, git-ignored, downloaded on first run
-docs/                                           documentation
+docs/                                           documentation; docs/images/ holds the README images (generated)
 ```
 
 ## Branches and workflows
@@ -98,7 +109,8 @@ merges, Conventional Commits in English. The repository has no workflows.
 
 **Departures from the standards (and why):**
 
-- **No banner or showcase:** scripts with no site of their own; the saved plots are the pictures.
+- **No "Open site" button, no phone strip:** scripts with no site; the images are the saved training plots in window
+  frames, and the logo is a wordmark (the project has none).
 - **Generated files are committed:** the word-pair files (about 90 MB), four trained models (`*.pth`, about 100 MB)
   and `__pycache__` are tracked. `.gitignore` now ignores them, but files already tracked stay in the tree and in the
   history until the owner removes them (and rewrites history or moves the models to Git LFS).
@@ -110,6 +122,13 @@ merges, Conventional Commits in English. The repository has no workflows.
 | ------------------------------------------ | --------------------------------------------------- |
 | [docs/repository.md](docs/repository.md)   | GitHub description and topics, the rename           |
 
+The README images (`docs/images/`) are regenerated with `tools/readme-images` (profile `neural-network`) from the plots
+in `pyTorch/path/`; the working shots go to `.scratch/`.
+
 ---
 
-Author: [Damian Tchorzewski](https://github.com/DamTchorzewski)
+<p align="center"><a href="https://damreboot.pl"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/company-dark.svg"><img src="docs/images/damreboot/company-light.svg" alt="damreboot.pl: company website" height="36"></picture></a><a href="https://www.linkedin.com/in/damian-tchorzewski-3b2388275/"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/linkedin-dark.svg"><img src="docs/images/damreboot/linkedin-light.svg" alt="LinkedIn: let's connect" height="36"></picture></a><a href="mailto:damianchabracki@gmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/email-dark.svg"><img src="docs/images/damreboot/email-light.svg" alt="E-mail: write to me" height="36"></picture></a></p>
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/damreboot/engineered-dark.svg"><img src="docs/images/damreboot/engineered-light.svg" alt="" height="33" align="middle"></picture> Engineered by <b>Damian Chabracki</b> (DamReboot IT)
+</p>
