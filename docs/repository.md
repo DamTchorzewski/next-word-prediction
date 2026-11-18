@@ -1,6 +1,16 @@
 # Repozytorium: opis i tagi
 
-Rzeczy, które ustawia się na GitHubie ręcznie (nie da się ich zapisać w plikach repozytorium). Przegląd projektu: [README](../README.md).
+Rzeczy, które ustawia się na GitHubie ręcznie (nie da się ich zapisać w plikach repozytorium). Przegląd projektu: [README](../README.md). Nazwa repozytorium zgodna z `reops/standards/repo-names.md`.
+
+## Zmiana nazwy
+
+To repozytorium to dawne `Id-Verification-And-Neural-Network`, rozdzielone na dwa. Zmień jego nazwę na GitHubie na `neural-network` (Settings → General → Repository name); GitHub przekieruje stary adres. Lokalnie folder już nazywa się `neural-network`, wystarczy:
+
+```bash
+git remote set-url origin https://github.com/DamTchorzewski/neural-network.git
+```
+
+Skrypty OpenCV przeszły do nowego repozytorium `id-verification`, ćwiczenia `simpleTools` do `tools/projects/python-exercises`. Starsza historia tych plików zostaje tutaj.
 
 ## Opis i tagi (About)
 
@@ -9,7 +19,7 @@ GitHub: strona repozytorium → ⚙ obok „About” → pola poniżej. Opis ma 
 **Opis (Description):**
 
 ```text
-Python workspace for computer vision and neural networks: ID-document verification with OpenCV and Tesseract OCR, an SVM traffic-sign classifier, face detection, and PyTorch models from tensors and an MNIST network to a bidirectional LSTM that predicts the next word.
+PyTorch learning workspace: tensors, an MNIST data loader and a small fully connected network, up to a bidirectional LSTM that predicts the next word, trained on text corpora preprocessed with NLTK. Training plots and saved models included.
 ```
 
 **Strona (Website):** puste (skrypty, nie ma strony).
@@ -17,18 +27,18 @@ Python workspace for computer vision and neural networks: ID-document verificati
 **Tagi (Topics):**
 
 ```text
-python opencv pytorch computer-vision neural-network deep-learning machine-learning ocr tesseract id-verification svm lstm nlp mnist
+python pytorch neural-network deep-learning machine-learning mnist lstm rnn nlp next-word-prediction nltk torchvision
 ```
 
-Z GitHub CLI (`gh`) to samo jedną komendą:
+Z GitHub CLI (`gh`) to samo jedną komendą (stare tagi `opencv`, `ocr`, `tesseract`, `id-verification`, `svm` usuń ręcznie lub `--remove-topic`):
 
 ```bash
-gh repo edit DamTchorzewski/Id-Verification-And-Neural-Network --description "Python workspace for computer vision and neural networks: ID-document verification with OpenCV and Tesseract OCR, an SVM traffic-sign classifier, face detection, and PyTorch models from tensors and an MNIST network to a bidirectional LSTM that predicts the next word." --add-topic python,opencv,pytorch,computer-vision,neural-network,deep-learning,machine-learning,ocr,tesseract,id-verification,svm,lstm,nlp,mnist
+gh repo edit DamTchorzewski/neural-network --description "PyTorch learning workspace: tensors, an MNIST data loader and a small fully connected network, up to a bidirectional LSTM that predicts the next word, trained on text corpora preprocessed with NLTK. Training plots and saved models included." --add-topic python,pytorch,neural-network,deep-learning,machine-learning,mnist,lstm,rnn,nlp,next-word-prediction,nltk,torchvision
 ```
 
 ## Wielkość repozytorium
 
-W repozytorium są wygenerowane pliki: pary słów (`pyTorch/advancedTools/wordPairs/`, ok. 90 MB), cztery wytrenowane modele (`pyTorch/path/*.pth`, ok. 100 MB) i `__pycache__`. Wpis `.pth` w `.gitignore` dopasowuje plik o dokładnie takiej nazwie, a nie `*.pth`. Usunięcie ich z repozytorium (z przepisaniem historii albo Git LFS) to decyzja właściciela; README opisuje to w sekcji **Departures**.
+W repozytorium są wygenerowane pliki: pary słów (`pyTorch/advancedTools/wordPairs/`, ok. 90 MB), cztery wytrenowane modele (`pyTorch/path/*.pth`, ok. 100 MB) i `__pycache__`. `.gitignore` ignoruje je od teraz (`*.pth`, `__pycache__/`), ale pliki już śledzone zostają w drzewie i historii. Usunięcie ich (z przepisaniem historii albo Git LFS) to decyzja właściciela.
 
 ## Ustawienia do włączenia
 
