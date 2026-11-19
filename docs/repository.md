@@ -4,13 +4,15 @@ Rzeczy, które ustawia się na GitHubie ręcznie (nie da się ich zapisać w pli
 
 ## Zmiana nazwy
 
-To repozytorium to dawne `Id-Verification-And-Neural-Network`, rozdzielone na dwa. Zmień jego nazwę na GitHubie na `neural-network` (Settings → General → Repository name); GitHub przekieruje stary adres. Lokalnie folder już nazywa się `neural-network`, wystarczy:
+To repozytorium to dawne `Id-Verification-And-Neural-Network` (rozdzielone na dwa), potem `neural-network`. Nazwa `next-word-prediction` mówi, czym jest projekt (standard: `reops/standards/repo-names.md`). Zmień nazwę na GitHubie (Settings → General → Repository name); GitHub przekieruje stare adresy. Lokalnie folder też nazywa się `next-word-prediction`, wystarczy:
 
 ```bash
-git remote set-url origin https://github.com/DamTchorzewski/neural-network.git
+git remote set-url origin https://github.com/DamTchorzewski/next-word-prediction.git
 ```
 
-Skrypty OpenCV przeszły do nowego repozytorium `id-verification`, ćwiczenia `simpleTools` do `tools/projects/python-exercises`. Starsza historia tych plików zostaje tutaj.
+Stare tagi `neural-network`, `rnn`, `torchvision` (i te po poprzednim repozytorium: `opencv`, `ocr`, `tesseract`, `id-verification`, `svm`) usuń ręcznie w About albo komendą `gh repo edit ... --remove-topic`.
+
+Skrypty OpenCV przeszły do repozytorium `id-verification`, ćwiczenia `simpleTools` do `tools/projects/python-exercises`. Starsza historia tych plików zostaje tutaj.
 
 ## Opis i tagi (About)
 
@@ -19,7 +21,7 @@ GitHub: strona repozytorium → ⚙ obok „About” → pola poniżej. Opis ma 
 **Opis (Description):**
 
 ```text
-Next-word prediction in PyTorch: a bidirectional LSTM that predicts the word following a sequence of 5 or 10 words, trained on text corpora preprocessed with NLTK, plus the warm-ups before it (tensors, a small MNIST network). Training plots and four trained models included.
+Next-word prediction model in PyTorch: a bidirectional LSTM suggests the word that follows a sequence of 5 or 10 words, trained on your own texts (stories, sentences, emotions). Includes NLTK preprocessing, training plots and four trained models: a base for autocomplete, writing assistants and chat suggestions.
 ```
 
 **Strona (Website):** puste (skrypty, nie ma strony).
@@ -27,13 +29,13 @@ Next-word prediction in PyTorch: a bidirectional LSTM that predicts the word fol
 **Tagi (Topics):**
 
 ```text
-python pytorch neural-network deep-learning machine-learning mnist lstm rnn nlp next-word-prediction nltk torchvision
+next-word-prediction language-model lstm pytorch nlp text-prediction autocomplete deep-learning machine-learning nltk python mnist
 ```
 
 Z GitHub CLI (`gh`) to samo jedną komendą (stare tagi `opencv`, `ocr`, `tesseract`, `id-verification`, `svm` usuń ręcznie lub `--remove-topic`):
 
 ```bash
-gh repo edit DamTchorzewski/neural-network --description "Next-word prediction in PyTorch: a bidirectional LSTM that predicts the word following a sequence of 5 or 10 words, trained on text corpora preprocessed with NLTK, plus the warm-ups before it (tensors, a small MNIST network). Training plots and four trained models included." --add-topic python,pytorch,neural-network,deep-learning,machine-learning,mnist,lstm,rnn,nlp,next-word-prediction,nltk,torchvision
+gh repo edit DamTchorzewski/next-word-prediction --description "Next-word prediction model in PyTorch: a bidirectional LSTM suggests the word that follows a sequence of 5 or 10 words, trained on your own texts (stories, sentences, emotions). Includes NLTK preprocessing, training plots and four trained models: a base for autocomplete, writing assistants and chat suggestions." --add-topic next-word-prediction,language-model,lstm,pytorch,nlp,text-prediction,autocomplete,deep-learning,machine-learning,nltk,python,mnist
 ```
 
 ## Wielkość repozytorium

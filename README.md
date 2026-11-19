@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/images/banner-dark.png">
-    <img src="docs/images/banner-light.png" alt="neural-network: PyTorch learning workspace" width="100%">
+    <img src="docs/images/banner-light.png" alt="next-word-prediction: a bidirectional LSTM that predicts the next word" width="100%">
   </picture>
 </p>
 
@@ -11,10 +11,10 @@
 
 ## About
 
-**neural-network** is a next-word prediction model written in PyTorch: given a sequence of 5 or 10 words, a bidirectional
+**next-word-prediction** is a next-word prediction model written in PyTorch: given a sequence of 5 or 10 words, a bidirectional
 LSTM predicts the word that follows. Around it are the warm-ups that led to it: tensors, a data loader and a small
 fully connected network on MNIST. It was split off from the former `Id-Verification-And-Neural-Network` repository
-(this one is that repository, renamed); the OpenCV scripts now live in `id-verification` and the small Python
+(this one is that repository, renamed to `neural-network` and then to `next-word-prediction`); the OpenCV scripts now live in `id-verification` and the small Python
 exercises in `tools/projects/python-exercises`.
 
 - **Next-word prediction (`pyTorch/advancedTools/`).** A two-layer bidirectional LSTM with an embedding and layer
@@ -65,8 +65,8 @@ All the saved plots are in `pyTorch/path/`: `training_plots_<text>_<length>.png`
 ## Quick start
 
 ```bash
-git clone https://github.com/DamTchorzewski/neural-network.git
-cd neural-network
+git clone https://github.com/DamTchorzewski/next-word-prediction.git
+cd next-word-prediction
 pip install torch torchvision matplotlib scikit-learn nltk tqdm
 python pyTorch/tensorBasics.py
 python pyTorch/neuralNetwork.py     # downloads MNIST to ./data
@@ -128,7 +128,7 @@ merges, Conventional Commits in English. The repository has no workflows.
 | ------------------------------------------ | --------------------------------------------------- |
 | [docs/repository.md](docs/repository.md)   | GitHub description and topics, the rename           |
 
-The README images (`docs/images/`) are regenerated with `tools/readme-images` (profile `neural-network`) from the plots
+The README images (`docs/images/`) are regenerated with `tools/readme-images` (profile `next-word-prediction`) from the plots
 in `pyTorch/path/`; the working shots go to `.scratch/`.
 
 ---
