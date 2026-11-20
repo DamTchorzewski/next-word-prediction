@@ -30,7 +30,7 @@ exercises in `tools/projects/python-exercises`.
 - **Warm-ups.** `tensorBasics.py` (tensors, addition, element-wise multiplication, transpose) and `dataLoaderMnist.py`
   (MNIST with a `DataLoader`, normalisation with mean 0.1307 and std 0.3081, batches of 64).
 
-> **Status:** a personal learning project. No accuracy figure is claimed here. The `data/` folder (MNIST) is
+> **Status:** no accuracy figure is claimed here. The `data/` folder (MNIST) is
 > downloaded on first run and is not in the repository; the sample prediction code uses CUDA.
 
 ## Tech stack
@@ -120,7 +120,7 @@ merges, Conventional Commits in English. The repository has no workflows.
 - **Generated files are committed:** the word-pair files (about 90 MB), four trained models (`*.pth`, about 100 MB)
   and `__pycache__` are tracked. `.gitignore` now ignores them, but files already tracked stay in the tree and in the
   history until the owner removes them (and rewrites history or moves the models to Git LFS).
-- **No dependency file, tests or CI:** a learning workspace.
+- **No dependency file, tests or CI:** a scripts workspace.
 
 ## Documentation
 
