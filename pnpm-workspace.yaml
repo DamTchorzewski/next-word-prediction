@@ -1,0 +1,4 @@
+# Only packages whose native binary the build needs may run install scripts.
+allowBuilds:
+  esbuild: true
+  protobufjs: false
