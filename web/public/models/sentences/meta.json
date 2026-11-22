@@ -1,0 +1,15 @@
+{
+  "id": "sentences",
+  "corpus": "generate_sentense.txt",
+  "window": 5,
+  "vocabSize": 1522,
+  "modelBytes": 3594984,
+  "fp32Bytes": 14176189,
+  "testWindows": 3354,
+  "top1": 0.6673,
+  "top5": 0.8187,
+  "fp32Top1": 0.667,
+  "fp32Top5": 0.8169,
+  "top1AgreementWithPyTorch": 0.9883,
+  "forms": 350
+}

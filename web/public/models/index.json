@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sentences",
+    "corpus": "generate_sentense.txt",
+    "window": 5,
+    "vocabSize": 1522,
+    "modelBytes": 3594984,
+    "fp32Bytes": 14176189,
+    "testWindows": 3354,
+    "top1": 0.6673,
+    "top5": 0.8187,
+    "fp32Top1": 0.667,
+    "fp32Top5": 0.8169,
+    "top1AgreementWithPyTorch": 0.9883,
+    "forms": 350
+  },
+  {
+    "id": "stories",
+    "corpus": "sherlock_holm_stories_plain.txt",
+    "window": 10,
+    "vocabSize": 8546,
+    "modelBytes": 7289618,
+    "fp32Bytes": 28589443,
+    "testWindows": 11467,
+    "top1": 0.1248,
+    "top5": 0.2621,
+    "fp32Top1": 0.1244,
+    "fp32Top5": 0.2628,
+    "top1AgreementWithPyTorch": 0.9727,
+    "forms": 2992
+  },
+  {
+    "id": "emotions",
+    "corpus": "emotion_final.csv",
+    "window": 10,
+    "vocabSize": 14894,
+    "modelBytes": 10628666,
+    "fp32Bytes": 41615539,
+    "testWindows": 76716,
+    "top1": 0.1261,
+    "top5": 0.2554,
+    "fp32Top1": 0.1261,
+    "fp32Top5": 0.2551,
+    "top1AgreementWithPyTorch": 0.9023,
+    "forms": 1518
+  }
+]

@@ -4,3 +4,10 @@ __pycache__/
 
 # Local working files (standards/scratch.md)
 /.scratch/
+
+# Web demo (web/): dependencies, build output, test reports
+node_modules/
+dist/
+/test-results/
+/playwright-report/
+/web/public/models/*/model.fp32.onnx

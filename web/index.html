@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Next-word Prediction · a bidirectional LSTM in your browser</title>
+    <meta
+      name="description"
+      content="Type a few words and a bidirectional LSTM trained in PyTorch suggests the next one. The model runs in the browser with ONNX Runtime Web; nothing is sent to a server."
+    />
+    <meta name="theme-color" content="#f6f1ea" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14100e" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      // apply the saved or system theme before the first paint
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.classList.toggle("dark", dark);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
