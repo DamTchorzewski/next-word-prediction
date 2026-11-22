@@ -1,0 +1,15 @@
+{
+  "id": "stories",
+  "corpus": "sherlock_holm_stories_plain.txt",
+  "window": 10,
+  "vocabSize": 8546,
+  "modelBytes": 7289618,
+  "fp32Bytes": 28589443,
+  "testWindows": 11467,
+  "top1": 0.1248,
+  "top5": 0.2621,
+  "fp32Top1": 0.1244,
+  "fp32Top5": 0.2628,
+  "top1AgreementWithPyTorch": 0.9727,
+  "forms": 2992
+}

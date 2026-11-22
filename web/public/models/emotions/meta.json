@@ -1,0 +1,15 @@
+{
+  "id": "emotions",
+  "corpus": "emotion_final.csv",
+  "window": 10,
+  "vocabSize": 14894,
+  "modelBytes": 10628666,
+  "fp32Bytes": 41615539,
+  "testWindows": 76716,
+  "top1": 0.1261,
+  "top5": 0.2554,
+  "fp32Top1": 0.1261,
+  "fp32Top5": 0.2551,
+  "top1AgreementWithPyTorch": 0.9023,
+  "forms": 1518
+}
