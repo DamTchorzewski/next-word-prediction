@@ -21,21 +21,21 @@ GitHub: strona repozytorium → ⚙ obok „About” → pola poniżej. Opis ma 
 **Opis (Description):**
 
 ```text
-Next-word prediction model in PyTorch: a bidirectional LSTM suggests the word that follows a sequence of 5 or 10 words, trained on your own texts (stories, sentences, emotions). Includes NLTK preprocessing, training plots and four trained models: a base for autocomplete, writing assistants and chat suggestions.
+Next-word prediction with a bidirectional LSTM in PyTorch, exported to ONNX (int8 weights) and run live in the browser: a Vue 3 + ONNX Runtime Web demo on GitHub Pages with top-k suggestions, sentence autocomplete and the model's input window. Three models (stories, sentences, emotions), NLTK preprocessing, training plots.
 ```
 
-**Strona (Website):** puste (skrypty, nie ma strony).
+**Strona (Website):** `https://damtchorzewski.github.io/next-word-prediction/` (demo na GitHub Pages; w `gh` flaga `--homepage`).
 
 **Tagi (Topics):**
 
 ```text
-next-word-prediction language-model lstm pytorch nlp text-prediction autocomplete deep-learning machine-learning nltk python mnist
+next-word-prediction language-model lstm pytorch onnx onnxruntime-web vue typescript nlp text-prediction autocomplete deep-learning machine-learning nltk python github-pages
 ```
 
 Z GitHub CLI (`gh`) to samo jedną komendą (stare tagi `opencv`, `ocr`, `tesseract`, `id-verification`, `svm` usuń ręcznie lub `--remove-topic`):
 
 ```bash
-gh repo edit DamTchorzewski/next-word-prediction --description "Next-word prediction model in PyTorch: a bidirectional LSTM suggests the word that follows a sequence of 5 or 10 words, trained on your own texts (stories, sentences, emotions). Includes NLTK preprocessing, training plots and four trained models: a base for autocomplete, writing assistants and chat suggestions." --add-topic next-word-prediction,language-model,lstm,pytorch,nlp,text-prediction,autocomplete,deep-learning,machine-learning,nltk,python,mnist
+gh repo edit DamTchorzewski/next-word-prediction --description "Next-word prediction with a bidirectional LSTM in PyTorch, exported to ONNX (int8 weights) and run live in the browser: a Vue 3 + ONNX Runtime Web demo on GitHub Pages with top-k suggestions, sentence autocomplete and the model's input window. Three models (stories, sentences, emotions), NLTK preprocessing, training plots." --homepage https://damtchorzewski.github.io/next-word-prediction/ --add-topic next-word-prediction,language-model,lstm,pytorch,onnx,onnxruntime-web,vue,typescript,nlp,text-prediction,autocomplete,deep-learning,machine-learning,nltk,python,github-pages --remove-topic mnist
 ```
 
 ## Wielkość repozytorium
@@ -44,7 +44,8 @@ W repozytorium są wygenerowane pliki: pary słów (`pyTorch/advancedTools/wordP
 
 ## Ustawienia do włączenia
 
-| Gdzie (GitHub)                                          | Co ustawić                              |
-| ------------------------------------------------------- | --------------------------------------- |
-| Settings → General → Default branch                     | `main` (już jest)                       |
-| Settings → Branches (albo Rulesets) → `main`, `develop` | zablokuj force push i usuwanie gałęzi   |
+| Gdzie (GitHub)                                          | Co ustawić                               |
+| ------------------------------------------------------- | ---------------------------------------- |
+| Settings → General → Default branch                     | `main` (już jest)                        |
+| Settings → Branches (albo Rulesets) → `main`, `develop` | zablokuj force push i usuwanie gałęzi    |
+| Settings → Pages → Source                               | **GitHub Actions** (demo z `deploy.yml`) |
