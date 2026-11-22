@@ -1,0 +1,15 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "web/src/**/*.ts",
+    "web/src/**/*.vue",
+    "web/env.d.ts",
+    "tests/**/*.ts",
+    "*.config.ts"
+  ],
+  "compilerOptions": {
+    "types": ["node", "vite/client"],
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true
+  }
+}

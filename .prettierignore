@@ -1,0 +1,7 @@
+dist
+node_modules
+pnpm-lock.yaml
+.scratch
+web/public/models
+pyTorch
+docs/images
